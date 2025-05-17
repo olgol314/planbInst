@@ -30,10 +30,10 @@
 }
 .character-select {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* 가로 줄 꽉 차면 다음 줄로 자동 줄바꿈 */
   justify-content: center;
   gap: 20px;
-  width: 100%;
+  width: 90vw; /* 공간 충분히 줌 */
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
@@ -41,17 +41,17 @@
 
 .character-select a {
   display: block;
-  width: 20vw;
-  max-width: 180px;
-  min-width: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .character-select a img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border: 3px solid white;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .character-select a img:hover {

@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container-inst {
+    position: relative;
+  }
