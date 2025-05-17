@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#guide {
+  color: white;
+  font-size: larger;
+  background-color: #3b3b3b;
+}
+
+#otamatone {
+  width: 300px;
+  margin-bottom: 3%;
+  transition: transform 0.1s ease;
+}
+
+#howto {
+  margin-top: -10%;
+}
+
+.playing {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.keyboard-visualizer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+}
+
+.keyboard-visualizer span {
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 2px solid #555;
+  border-radius: 5px;
+  background-color: #eee;
+  font-family: monospace;
+  font-size: 1.2em;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.keyboard-visualizer-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.container-inst {
+  position: relative;
+}
+
+.keyboard-visualizer.black {
+  position: absolute;
+  top: -40%; /* 백건 기준으로 겹치기 */
+  left: 0;
+  height: 0;
+  pointer-events: none; /* 클릭 무시할 거면 */
+}
+
+.keyboard-visualizer.black span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  z-index: -1;
+  font-size: 1.2em;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.keyboard-visualizer span.active {
+  background-color: #ffcc00;
+  color: black;
+  transform: scale(1.2);
+}
+
+/* 흑건 위치 (백건 간격: 30px 기준) */
+.keyboard-visualizer.black span[data-key="2"] {
+  left: 20px;
+} /* A# */
+.keyboard-visualizer.black span[data-key="4"] {
+  left: 102px;
+} /* C# */
+.keyboard-visualizer.black span[data-key="5"] {
+  left: 150px;
+} /* D# */
+.keyboard-visualizer.black span[data-key="7"] {
+  left: 232px;
+} /* F# */
+.keyboard-visualizer.black span[data-key="8"] {
+  left: 276px;
+} /* G# */
+.keyboard-visualizer.black span[data-key="9"] {
+  left: 320px;
+} /* A# */
+.keyboard-visualizer.black span[data-key="-"] {
+  left: 403px;
+} /* C# */
+.keyboard-visualizer.black span[data-key="="] {
+  left: 450px;
+} /* D# */
